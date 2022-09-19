@@ -4,5 +4,5 @@ func peakIndexInMountainArray(arr []int) int {
             return idx
         }
 	}
-    return 1
+    return 0
 }
