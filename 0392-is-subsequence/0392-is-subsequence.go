@@ -1,7 +1,4 @@
 func isSubsequence(s string, t string) bool {
-	if len(s) == 0 {
-		return true
-	}
 	curSubCharInd := 0
 	for ind := 0; ind < len(t); ind++ {
 		if curSubCharInd >= len(s) {
