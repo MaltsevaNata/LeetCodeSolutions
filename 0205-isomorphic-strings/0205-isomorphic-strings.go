@@ -1,10 +1,9 @@
 func getLettersCode(str string) (code []int) {
-	letterCodeMap := make(map[string]int) // {letter: code}
+	letterCodeMap := make(map[int32]int) // {letter: code}
 	for ind, char := range str {
-		letter := string(char)
-		letterCode, ok := letterCodeMap[letter]
+		letterCode, ok := letterCodeMap[char]
 		if !ok {
-			letterCodeMap[letter] = ind
+			letterCodeMap[char] = ind
 			letterCode = ind
 		}
 		code = append(code, letterCode)
