@@ -11,6 +11,5 @@ func middleNode(head *ListNode) *ListNode {
 		values = append(values, head)
 		head = head.Next
 	}
-	res := values[len(values)/2]
-	return res
+	return values[len(values)/2]
 }
