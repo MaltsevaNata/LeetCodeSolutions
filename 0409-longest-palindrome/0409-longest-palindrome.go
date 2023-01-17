@@ -9,13 +9,7 @@ func longestPalindrome(s string) (length int) {
 		}
 	}
 	for _, count := range letterCounter {
-		if count%2 == 0 {
-			length += count
-		} else {
-			if count > 2 {
-				length += count - 1
-			}
-		}
+        length += count - count%2
 	}
 	if length < len(s) {
 		length += 1 // middle element can be without pair
