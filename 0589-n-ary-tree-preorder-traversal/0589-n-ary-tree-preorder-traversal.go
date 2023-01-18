@@ -5,24 +5,20 @@
  *     Children []*Node
  * }
  */
-func nodeTraversal(result *[]int, root *Node) []int {
+func nodeTraversal(result []int, root *Node) []int {
 	if root != nil {
-		res := append(*result, root.Val)
-		result = &res
+		result = append(result, root.Val)
 		for _, node := range root.Children {
 			if len(node.Children) == 0 {
-				res := append(*result, node.Val)
-				result = &res
+				result = append(result, node.Val)
 			} else {
-				trav := nodeTraversal(result, node)
-				result = &trav
+				result = nodeTraversal(result, node)
 			}
 		}
 	}
-	return *result
+	return result
 }
 
 func preorder(root *Node) (result []int) {
-	result = nodeTraversal(&result, root)
-	return result
+	return nodeTraversal(result, root)
 }
