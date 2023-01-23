@@ -24,6 +24,7 @@ func checkBadVersion(startN int, endN int) int {
 	return left
 }
 
+
 func firstBadVersion(n int) int {
 	return checkBadVersion(1, n)
 }
