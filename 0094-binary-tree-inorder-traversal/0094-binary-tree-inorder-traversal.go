@@ -6,7 +6,8 @@
  *     Right *TreeNode
  * }
  */
-func inorderTraversal(root *TreeNode) (res []int) {
+func inorderTraversal(root *TreeNode) []int {
+    var res = make([]int, 0, 100)
     nodeInorderTraversal(root, &res)
     return res
 }
