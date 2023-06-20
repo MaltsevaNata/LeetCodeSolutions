@@ -14,7 +14,7 @@ func inorderTraversal(root *TreeNode) (res []int) {
 
 func nodeInorderTraversal(node *TreeNode, res *[]int)  {
     if node == nil {
-        return 
+        return
     }
     nodeInorderTraversal(node.Left, res)
     *res = append(*res, node.Val)
