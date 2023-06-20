@@ -7,15 +7,16 @@
  * }
  */
 func inorderTraversal(root *TreeNode) (res []int) {
-    return nodeInorderTraversal(root, res)
+    nodeInorderTraversal(root, &res)
+    return res
 }
 
-func nodeInorderTraversal(node *TreeNode, res []int) []int {
+func nodeInorderTraversal(node *TreeNode, res *[]int)  {
     if node == nil {
-        return res
+        return 
     }
-    res = nodeInorderTraversal(node.Left, res)
-    res = append(res, node.Val)
-    res = nodeInorderTraversal(node.Right, res)
-    return res
+    nodeInorderTraversal(node.Left, res)
+    *res = append(*res, node.Val)
+    nodeInorderTraversal(node.Right, res)
+    return 
 }
