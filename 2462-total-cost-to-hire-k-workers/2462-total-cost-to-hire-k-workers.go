@@ -73,7 +73,7 @@ func totalCost(costs []int, k int, candidates int) int64 { // n - costs
                 next = costsQueue[0] 
                 costsQueue = costsQueue[1:] // O(1)
                 heap.Push(&h, &Candidate{Cost: next, Idx: head}) // O(logn)
-                head ++ // 5
+                head++
             } else {
                 length := len(costsQueue)-1
                 next = costsQueue[length]
