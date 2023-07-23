@@ -1,6 +1,5 @@
 func removeElement(nums []int, val int) int {
     i := 0
-    k := 0
     
     for i < len(nums){
         if nums[i] == val {
@@ -9,8 +8,7 @@ func removeElement(nums []int, val int) int {
             nums = nums[:last]
         } else {
             i++
-            k++
         }
     }
-    return k
+    return len(nums)
 }
